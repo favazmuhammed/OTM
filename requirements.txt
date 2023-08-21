@@ -1,0 +1,12 @@
+pytorch-lightning==1.9.3
+tqdm
+bcolz-zipline
+prettytable
+menpo
+mxnet
+opencv-python-headless
+wandb
+pandas
+numpy
+scikit-learn
+

@@ -1,0 +1,27 @@
+CUDA_VISIBLE_DEVICES=0 python main.py \
+    --data_root ./ \
+    --train_data_path ../adaface_org/AdaFace/data/faces_emore/imgs_subset \
+    --val_data_path data/DL23_Dataset \
+    --test_data_path data/faces_webface_112x112 \
+    --prefix ir18_posearcface_quality_pose \
+    --gpus 1 \
+    --use_16bit \
+    --arch ir_18 \
+    --batch_size 512 \
+    --num_workers 16 \
+    --epochs 26 \
+    --lr_milestones 12,16,24 \
+    --lr 0.1 \
+    --head posearcface \
+    --include_pose \
+    --include_quality \
+    --m 0.2 \
+    --h 0.333 \
+    --s 64.0 \
+    --t_alpha 0.05 \
+    --distributed_backend ddp \
+    --swap_color_channel \
+    --low_res_augmentation_prob 0.2 \
+    --crop_augmentation_prob 0.2 \
+    --photometric_augmentation_prob 0.2 \
+    --custom_num_class 52158 \
